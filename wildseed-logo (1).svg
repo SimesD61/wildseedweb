@@ -1,0 +1,20 @@
+<svg id="logo-svg" class="wildseed-logo w-full h-auto" viewBox="-15 0 530 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs><style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;display=swap');</style>
+                        <!-- Filter for softening edges -->
+                        <filter id="soften-edges">
+                            <feGaussianBlur id="blur-effect" in="SourceGraphic" stdDeviation="0.3"/>
+                        </filter>
+                        <!-- Gradient Definition -->
+                        <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop id="grad-stop-1" offset="0%" stop-color="#34b3e3"/>
+                            <stop id="grad-stop-2" offset="100%" stop-color="#008cbf"/>
+                        </linearGradient>
+                        <!-- Mask for the "Broken E" Effect -->
+                        <mask id="broken-e-mask">
+                            <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+                            <rect id="mask-rect-1" height="6" fill="black" x="324.8530578613281" y="27" width="61.57684326171875"/>
+                            <rect id="mask-rect-2" height="6" fill="black" x="386.420654296875" y="27" width="61.58612060546875"/>
+                        </mask>
+                    </defs>
+                    <text id="logo-text" x="50%" y="55%" class="logo-text" style="font-family: 'Montserrat', sans-serif; font-size: 80px; font-weight: 500; letter-spacing: 0.1em; text-anchor: middle; dominant-baseline: middle;" fill="url(#logo-gradient)" mask="url(#broken-e-mask)" filter="url(#soften-edges)">WILDSEED</text>
+                </svg>

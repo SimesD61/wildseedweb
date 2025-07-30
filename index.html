@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildseed Ltd.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        /* Apply Montserrat font globally */
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Hide pages by default, show only the active one */
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 shadow-lg py-4 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between rounded-b-lg">
+        <div class="flex items-center mb-4 md:mb-0">
+            <!-- SVG Logo with proper proportions -->
+            <div class="h-8 md:h-10 mr-3">
+                <img src="wildseed-logo (1).svg" alt="Wildseed Ltd. Logo" class="h-full w-auto" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='inline';" />
+                <span class="text-2xl font-bold text-indigo-400 hidden">Wildseed Ltd.</span>
+            </div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg">
+            <button class="nav-link px-4 py-2 rounded-lg transition-all duration-300 ease-in-out text-gray-300 hover:bg-gray-700 hover:text-indigo-400 active-nav-link" data-page="home">Home</button>
+            <button class="nav-link px-4 py-2 rounded-lg transition-all duration-300 ease-in-out text-gray-300 hover:bg-gray-700 hover:text-indigo-400" data-page="about">About Us</button>
+            <button class="nav-link px-4 py-2 rounded-lg transition-all duration-300 ease-in-out text-gray-300 hover:bg-gray-700 hover:text-indigo-400" data-page="services">Services</button>
+            <button class="nav-link px-4 py-2 rounded-lg transition-all duration-300 ease-in-out text-gray-300 hover:bg-gray-700 hover:text-indigo-400" data-page="contact">Contact Us</button>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-12">
+        <!-- Home Page -->
+        <section id="home-page" class="page-content active bg-gray-800 p-8 md:p-12 rounded-xl shadow-lg text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-400 mb-6 leading-tight">
+                Unlocking Potential with AI & Agent-Driven Solutions
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Wildseed Ltd. is a cutting-edge technology company dedicated to building innovative software solutions for SMEs and enterprises. Our experienced team leverages the power of Artificial Intelligence and intelligent Agents to transform businesses.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50" onclick="showPage('services')">
+                    Discover Our Services
+                </button>
+                <button class="bg-gray-700 border border-indigo-600 text-indigo-400 hover:bg-gray-600 font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50" onclick="showPage('contact')">
+                    Get In Touch
+                </button>
+            </div>
+        </section>
+
+        <!-- About Us Page -->
+        <section id="about-page" class="page-content bg-gray-800 p-8 md:p-12 rounded-xl shadow-lg">
+            <h2 class="text-3xl md:text-4xl font-bold text-indigo-400 mb-6 text-center">About Wildseed Ltd.</h2>
+            <div class="text-gray-300 space-y-6 text-lg">
+                <p>
+                    At Wildseed Ltd., we believe in the transformative power of technology. Founded by a team of seasoned professionals with decades of combined experience in software development, AI research, and business strategy, we are uniquely positioned to deliver solutions that drive real-world impact.
+                </p>
+                <p>
+                    Our core strength lies in our deep expertise in Artificial Intelligence and autonomous Agent systems. We don't just build software; we craft intelligent ecosystems that learn, adapt, and optimize processes, giving our clients a significant competitive edge.
+                </p>
+                <p>
+                    We are passionate about helping businesses, from dynamic SMEs to large enterprises, navigate the complexities of the digital landscape. Our approach is collaborative, focusing on understanding your unique challenges and designing bespoke solutions that integrate seamlessly with your existing operations.
+                </p>
+                <p>
+                    Join us on a journey to cultivate innovation and grow your business with smart, future-proof technology.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Page -->
+        <section id="services-page" class="page-content bg-gray-800 p-8 md:p-12 rounded-xl shadow-lg">
+            <h2 class="text-3xl md:text-4xl font-bold text-indigo-400 mb-8 text-center">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1: AI-Powered Automation -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="brain" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-3">AI-Powered Automation</h3>
+                    <p class="text-gray-300 text-base">Streamline your operations with intelligent automation solutions that reduce manual effort and improve efficiency across various business functions.</p>
+                </div>
+                <!-- Service Card 2: Intelligent Agent Development -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="bot" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-3">Intelligent Agent Development</h3>
+                    <p class="text-gray-300 text-base">Deploy autonomous software agents capable of performing complex tasks, making decisions, and interacting with systems to achieve specific goals.</p>
+                </div>
+                <!-- Service Card 3: Data Analytics & Insights -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-3">Data Analytics & Insights</h3>
+                    <p class="text-gray-300 text-base">Transform raw data into actionable insights using advanced AI-driven analytics, enabling smarter decision-making and strategic growth.</p>
+                </div>
+                <!-- Service Card 4: Custom Software Development -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="code" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-3">Custom Software Development</h3>
+                    <p class="text-gray-300 text-base">Tailored software solutions built from the ground up to meet your unique business requirements, ensuring scalability and robust performance.</p>
+                </div>
+                <!-- Service Card 5: Enterprise AI Integration -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="link" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-3">Enterprise AI Integration</h3>
+                    <p class="text-gray-300 text-base">Seamless integration of AI capabilities into existing enterprise systems, enhancing functionality and unlocking new possibilities for large organizations.</p>
+                </div>
+                <!-- Service Card 6: SME Digital Transformation -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-xl">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="rocket" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-3">SME Digital Transformation</h3>
+                    <p class="text-gray-300 text-base">Empowering small to medium-sized enterprises with accessible and powerful AI tools to modernize operations and compete effectively.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Page -->
+        <section id="contact-page" class="page-content bg-gray-800 p-8 md:p-12 rounded-xl shadow-lg max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-indigo-400 mb-6 text-center">Contact Us</h2>
+            <p class="text-lg text-gray-300 mb-8 text-center">
+                Have a project in mind or want to learn more about how AI and Agents can transform your business? Get in touch with us!
+            </p>
+
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="w-full px-4 py-2 border border-gray-600 rounded-lg shadow-sm bg-gray-700 text-gray-100 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out"
+                        placeholder="John Doe"
+                        required
+                    />
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Your Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="w-full px-4 py-2 border border-gray-600 rounded-lg shadow-sm bg-gray-700 text-gray-100 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out"
+                        placeholder="you@example.com"
+                        required
+                    />
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Your Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        class="w-full px-4 py-2 border border-gray-600 rounded-lg shadow-sm bg-gray-700 text-gray-100 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out"
+                        placeholder="Tell us about your project or inquiry..."
+                        required
+                    ></textarea>
+                </div>
+                <div class="text-center">
+                    <button
+                        type="submit"
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+                    >
+                        Send Message
+                    </button>
+                </div>
+            </form>
+
+            <div class="mt-10 pt-6 border-t border-gray-700 text-center">
+                <p class="text-gray-400 mb-2">Alternatively, you can reach us directly:</p>
+                <p class="text-indigo-400 font-medium">Email: info@wildseedltd.com</p>
+                <p class="text-indigo-400 font-medium">Phone: +44 1234 567890</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-white py-6 px-4 md:px-12 text-center rounded-t-lg">
+        <p>&copy; <span id="current-year"></span> Wildseed Ltd. All rights reserved.</p>
+        <p class="text-sm mt-2 text-gray-400">Innovating with AI & Agents for a smarter future.</p>
+    </footer>
+
+    <script>
+        // JavaScript for page navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageContents = document.querySelectorAll('.page-content');
+            const currentYearSpan = document.getElementById('current-year');
+
+            // Set current year in footer
+            currentYearSpan.textContent = new Date().getFullYear();
+
+            // Function to show a specific page
+            window.showPage = (pageId) => {
+                // Hide all pages
+                pageContents.forEach(page => page.classList.remove('active'));
+                // Show the selected page
+                document.getElementById(`${pageId}-page`).classList.add('active');
+
+                // Update active navigation link styling
+                navLinks.forEach(link => {
+                    if (link.dataset.page === pageId) {
+                        link.classList.add('bg-indigo-600', 'text-white', 'shadow-md');
+                        link.classList.remove('text-gray-300', 'hover:bg-gray-700', 'hover:text-indigo-400');
+                    } else {
+                        link.classList.remove('bg-indigo-600', 'text-white', 'shadow-md');
+                        link.classList.add('text-gray-300', 'hover:bg-gray-700', 'hover:text-indigo-400');
+                    }
+                });
+            };
+
+            // Add click listeners to navigation buttons
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    showPage(link.dataset.page);
+                });
+            });
+
+            // Set initial active link for the home page on load
+            showPage('home'); // Ensure home page is active on initial load
+
+            // Initialize Lucide icons
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
+
